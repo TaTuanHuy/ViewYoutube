@@ -8,6 +8,8 @@ function Input ({...props}){
     // }
     return(
         <input 
+            name ={props.name}
+            id={props.id}
             className={props.class}
             type={props.type}
             placeholder={props.placeholder}

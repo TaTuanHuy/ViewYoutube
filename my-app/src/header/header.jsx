@@ -13,7 +13,7 @@ function Header() {
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-around">
             <AElement 
                 class="navbar-brand d-flex align-items-center"
-                href="https://www.youtube.com/"
+                href="http://localhost:3000/"
                 value="Youtube"
             >
                 <Img
@@ -67,6 +67,16 @@ function Header() {
                         class="dropdown-item"
                         href="#"
                         value="Cài đặt"
+                    />
+                    <AElement 
+                        class="dropdown-item"
+                        href="http://localhost:3000/SignIn"
+                        value="Đăng Nhập"
+                    />
+                    <AElement 
+                        class="dropdown-item"
+                        href="http://localhost:3000/Register"
+                        value="Đăng kí"
                     />
                 </div>
             </DropDown>

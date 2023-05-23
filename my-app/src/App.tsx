@@ -1,17 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header from "./header/header"
-import Body from "./Body/Body"
-
+import Layout from "./Layout"
+import { Outlet, Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header>
-        <Header />
-      </header>
-      <div id="body">
-          <Body />
-      </div>
+      <Layout />
     </div>
   );
 }
