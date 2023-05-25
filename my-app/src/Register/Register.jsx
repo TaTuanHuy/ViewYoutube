@@ -3,9 +3,10 @@ import Input from "../component/input"
 import Button from "../component/button"
 import { useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 function Register () {
-    
+    const navigation = useNavigate()
     const [account, setAccount] = useState('')
     const [password, setPassword] = useState('')
     const [full_name, setFull_name] = useState('')
@@ -14,12 +15,17 @@ function Register () {
 
     function btnRegister(){
         const createUser = async () => {
-            await axios.post("http://localhost:8000/register", {
+            try{
+                await axios.post("http://localhost:8000/register", {
                 user_name : account,
                 pass_word : password,
                 full_name : full_name,
                 user_id : user_id
             })
+            navigation("/")
+            }catch(error){
+            navigation("/Register")
+            }
         }
         createUser()
     }
