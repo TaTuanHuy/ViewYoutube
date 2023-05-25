@@ -11,15 +11,8 @@ function Register () {
     const [full_name, setFull_name] = useState('')
     const [user_id, setUserId] = useState('')
 
-    const [data, setData] = useState('')
 
-    async function btnRegister(){
-        // await setData({
-        //     user_name : account,
-        //     pass_word : password,
-        //     full_name : full_name,
-        //     user_id : user_id
-        // })
+    function btnRegister(){
         const createUser = async () => {
             await axios.post("http://localhost:8000/register", {
                 user_name : account,
@@ -28,7 +21,7 @@ function Register () {
                 user_id : user_id
             })
         }
-        await createUser()
+        createUser()
     }
 
 

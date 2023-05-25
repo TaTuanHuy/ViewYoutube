@@ -1,4 +1,3 @@
-import AElement from "../component/a"
 import Input from "../component/input"
 import Button from "../component/button"
 import CheckLogin from "../checkLogin"
@@ -6,17 +5,15 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 function SignIn () {
-    const [state, setState] = useState('')
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
    
    function getValue(){
-        setState({
-            user_name: userName,
-            pass_word: password
-        })
         const token = async ()=>{
-            let value = await axios.post('http://localhost:8000/login', state)
+            let value = await axios.post('http://localhost:8000/login', {
+                user_name: userName,
+                pass_word: password
+            })
             localStorage.clear()
             localStorage.setItem('token', value.data)
         }
