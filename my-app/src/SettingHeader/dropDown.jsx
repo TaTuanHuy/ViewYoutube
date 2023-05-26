@@ -2,6 +2,7 @@ import AElement from "../component/a"
 import UserIcon from "../component/userIcons"
 import Img from "../component/img"
 import DropDown from "../component/dropDown"
+// import Button from "../component/button"
 function DropDownNotAuth(){
     return(
         <DropDown class="dropdown">
@@ -51,7 +52,7 @@ function DropDownAuth(){
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <AElement 
                     class="dropdown-item"
-                    href="#"
+                    href="http://localhost:3000/profileUser"
                     value="Thông tin của bạn"
                 />
                 <AElement 

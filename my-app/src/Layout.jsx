@@ -5,6 +5,7 @@ import BodyContent from "./BodyConponent/bodyContent"
 import ProfileVideo from "./profileVideo/profile"
 import SignIn from "./SignIn/SignIn";
 import Register from "./Register/Register";
+import ProfileUser from "./ProfileUser/profileUser"
 function LayOut(){
     return(
        <div>
@@ -24,6 +25,7 @@ function LayOut(){
                             <Route path="/:id" element={<ProfileVideo/>} />
                             <Route path="/SignIn" element={<SignIn />} />
                             <Route path="/Register" element={<Register />} />
+                            <Route path="/profileUser" element={<ProfileUser />} />
                         </Routes>
                         </BrowserRouter>
                         </div>

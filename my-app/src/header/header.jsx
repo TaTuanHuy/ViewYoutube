@@ -50,6 +50,7 @@ function Header() {
             </div>
 
             {/* {auth ? <DropDownAuth />: <DropDownNotAuth />} */}
+            <DropDownAuth />
         </nav>
     )
 }
